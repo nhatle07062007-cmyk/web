@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Báo cáo trực quan về chuỗi giá giả định: xu hướng, thống kê theo tháng và các mốc được gắn nhãn giá sàn hoặc giá trần.">
+    <meta name="theme-color" content="#101a2a">
+    <title>Phân tích biến động giá</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="scripts.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Đi đến nội dung chính</a>
+
+    <header class="site-header" id="top">
+        <nav class="nav-container" aria-label="Điều hướng chính">
+            <a class="brand" href="#top" aria-label="Bản đồ giá - về đầu trang">
+                <span class="brand-mark" aria-hidden="true">↗</span>
+                <span>Bản đồ giá</span>
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Mở menu" aria-expanded="false" aria-controls="navMenu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a class="nav-link active" href="#tong-quan">Tổng quan</a></li>
+                <li><a class="nav-link" href="#bieu-do">Biểu đồ</a></li>
+                <li><a class="nav-link" href="#nhan-xet">Nhận xét</a></li>
+                <li><a class="nav-link" href="#du-lieu">Dữ liệu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main">
+        <section class="video-intro" aria-labelledby="video-title">
+            <div class="video-intro-inner">
+                <div class="video-heading">
+                    <p class="eyebrow"><span class="status-dot"></span> VIDEO GIỚI THIỆU</p>
+                    <h1 id="video-title">Phân tích biến động giá</h1>
+                    <p>Xem video trước khi khám phá các biểu đồ và số liệu chi tiết bên dưới.</p>
+                </div>
+                <video class="intro-video" controls playsinline preload="metadata" aria-label="Video giới thiệu phân tích biến động giá">
+                    <source src="dothi.mp4" type="video/mp4">
+                    Trình duyệt của bạn không hỗ trợ phát video. <a href="dothi.mp4">Tải video MP4</a>.
+                </video>
+            </div>
+        </section>
+
+        <section class="hero section-anchor" id="tong-quan" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="status-dot"></span> BÁO CÁO DỮ LIỆU</p>
+                <h1 id="hero-title">Toàn cảnh biến động giá trong năm</h1>
+                <p class="hero-description">Khám phá diễn biến giá đóng cửa, nhịp biến động theo tháng và các mốc được gắn nhãn giá sàn/giá trần trong bộ dữ liệu minh hoạ.</p>
+                <div class="hero-actions">
+                    <a class="button button-primary" href="#bieu-do">Khám phá biểu đồ <span aria-hidden="true">↓</span></a>
+                    <a class="text-link" href="phan_tich_gia/ngay_bat_thuong.csv" download>Tải dữ liệu CSV <span aria-hidden="true">↗</span></a>
+                </div>
+                <p class="data-notice"><strong>Lưu ý:</strong> Đây là dữ liệu giả định dùng cho mục đích minh hoạ, không đại diện cho mã chứng khoán hay tài sản cụ thể.</p>
+            </div>
+            <figure class="hero-chart">
+                <img src="phan_tich_gia/xu_huong_gia_ca_nam.png" alt="Biểu đồ đường giá đóng cửa giả định theo thời gian">
+                <figcaption><span class="legend-dot"></span> Giá đóng cửa giả định <span class="caption-unit">· VND</span></figcaption>
+            </figure>
+        </section>
+
+        <section class="metrics section-anchor" aria-label="Các chỉ số tổng quan">
+            <article class="metric-card">
+                <span class="metric-label">Số quan sát</span>
+                <strong class="metric-value">208</strong>
+                <span class="metric-note">Trong toàn bộ giai đoạn</span>
+            </article>
+            <article class="metric-card">
+                <span class="metric-label">Giá đóng cửa trung bình</span>
+                <strong class="metric-value">14.317 <small>VND</small></strong>
+                <span class="metric-note">Tính trên 208 quan sát</span>
+            </article>
+            <article class="metric-card">
+                <span class="metric-label">Khoảng giá quan sát</span>
+                <strong class="metric-value">7.811–27.024 <small>VND</small></strong>
+                <span class="metric-note">Thấp nhất đến cao nhất</span>
+            </article>
+            <article class="metric-card">
+                <span class="metric-label">Nhãn trong tệp CSV</span>
+                <strong class="metric-value">106 / 102</strong>
+                <span class="metric-note">Giá trần / giá sàn được gắn nhãn</span>
+            </article>
+        </section>
+
+        <section class="report-section section-anchor" id="bieu-do" aria-labelledby="charts-title">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">KHÁM PHÁ DỮ LIỆU</p>
+                    <h2 id="charts-title">Bốn góc nhìn về mức giá</h2>
+                </div>
+                <p class="section-intro">Các biểu đồ được dựng từ cùng bộ dữ liệu giả định. Chọn từng biểu đồ để mở ảnh ở kích thước đầy đủ.</p>
+            </div>
+
+            <div class="chart-grid">
+                <figure class="chart-card chart-card-wide">
+                    <a class="chart-image-link" href="phan_tich_gia/xu_huong_gia_ca_nam.png" target="_blank" rel="noopener">
+                        <img src="phan_tich_gia/xu_huong_gia_ca_nam.png" alt="Đường giá đóng cửa giả định theo thứ tự ngày, đơn vị VND" loading="lazy">
+                    </a>
+                    <figcaption><span class="chart-index">01</span><span><strong>Diễn biến trong năm</strong><small>Giá đóng cửa theo ngày · VND</small></span></figcaption>
+                </figure>
+                <figure class="chart-card">
+                    <a class="chart-image-link" href="phan_tich_gia/gia_trung_binh_theo_thang.png" target="_blank" rel="noopener">
+                        <img src="phan_tich_gia/gia_trung_binh_theo_thang.png" alt="Giá đóng cửa trung bình và khoảng biến động theo từng tháng, đơn vị VND" loading="lazy">
+                    </a>
+                    <figcaption><span class="chart-index">02</span><span><strong>Mức giá trung bình theo tháng</strong><small>Giá trung bình và khoảng dao động · VND</small></span></figcaption>
+                </figure>
+                <figure class="chart-card">
+                    <a class="chart-image-link" href="phan_tich_gia/boxplot_gia_theo_thang.png" target="_blank" rel="noopener">
+                        <img src="phan_tich_gia/boxplot_gia_theo_thang.png" alt="Biểu đồ hộp thể hiện phân bố giá đóng cửa theo từng tháng, đơn vị VND" loading="lazy">
+                    </a>
+                    <figcaption><span class="chart-index">03</span><span><strong>Phân bố giá theo tháng</strong><small>Trung vị, tứ phân vị và điểm ngoại lệ · VND</small></span></figcaption>
+                </figure>
+                <figure class="chart-card chart-card-wide">
+                    <a class="chart-image-link" href="phan_tich_gia/phan_bo_gia_2_nua_nam.png" target="_blank" rel="noopener">
+                        <img src="phan_tich_gia/phan_bo_gia_2_nua_nam.png" alt="So sánh phân bố giá đóng cửa giữa hai nửa giai đoạn, đơn vị VND" loading="lazy">
+                    </a>
+                    <figcaption><span class="chart-index">04</span><span><strong>So sánh hai nửa năm</strong><small>Phân bố giá đóng cửa · VND</small></span></figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section class="insights-section section-anchor" id="nhan-xet" aria-labelledby="insights-title">
+            <div class="insights-layout">
+                <div class="insights-heading">
+                    <p class="eyebrow">ĐỌC BIỂU ĐỒ</p>
+                    <h2 id="insights-title">Những điểm đáng chú ý</h2>
+                    <p>Các nhận xét dưới đây mô tả hình dạng của chuỗi dữ liệu, không phải dự báo hay khuyến nghị giao dịch.</p>
+                </div>
+                <div class="insight-list">
+                    <article class="insight-item">
+                        <span class="insight-number">01</span>
+                        <div><h3>Biên độ trong năm khá rộng</h3><p>Giá trong mẫu dao động từ khoảng 7.811 đến 27.024 VND. Đỉnh cao nhất xuất hiện trong quý I theo biểu đồ xu hướng.</p></div>
+                    </article>
+                    <article class="insight-item">
+                        <span class="insight-number">02</span>
+                        <div><h3>Mức giá thay đổi theo từng giai đoạn</h3><p>Trung bình tháng cao hơn vào đầu năm và tháng 10; các tháng giữa năm có mức giá thấp hơn trong mẫu.</p></div>
+                    </article>
+                    <article class="insight-item">
+                        <span class="insight-number">03</span>
+                        <div><h3>Nhãn trần/sàn được giữ nguyên từ CSV</h3><p>Tệp đi kèm ghi nhận 106 dòng “Giá trần” và 102 dòng “Giá sàn”. Đây là nhãn trong dữ liệu đầu vào, chưa được xác thực với quy tắc của một thị trường cụ thể.</p></div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="method-section section-anchor" id="du-lieu" aria-labelledby="data-title">
+            <div class="method-card">
+                <div class="method-copy">
+                    <p class="eyebrow">PHƯƠNG PHÁP & TỆP NGUỒN</p>
+                    <h2 id="data-title">Hiểu đúng trước khi sử dụng</h2>
+                    <p>Báo cáo sử dụng các ảnh biểu đồ và tệp CSV được cung cấp trong thư mục <code>phan_tich_gia</code>. Tệp CSV có 208 quan sát; ngày được chọn không nhất thiết liên tục.</p>
+                    <p>Các chỉ số tổng quan được tính từ cột <code>Gia_dong_cua</code>. Phân loại “Giá trần/Giá sàn” chỉ phản ánh cột <code>Bat_thuong</code> hiện có, không hàm ý vi phạm hay giới hạn giao dịch thực tế.</p>
+                    <a class="button button-secondary" href="phan_tich_gia/ngay_bat_thuong.csv" download>Tải tệp dữ liệu <span aria-hidden="true">↓</span></a>
+                </div>
+                <aside class="method-note">
+                    <span class="note-icon" aria-hidden="true">i</span>
+                    <h3>Giới hạn của báo cáo</h3>
+                    <p>Không có thông tin về mã tài sản, nguồn dữ liệu thị trường hoặc đơn vị phát hành. Vì vậy, mọi số liệu ở đây chỉ nên dùng để minh hoạ cách đọc biểu đồ.</p>
+                    <p class="updated-note">Đơn vị giá: VND</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true">↗</span><span>Bản đồ giá</span></a>
+            <p>Báo cáo trực quan dữ liệu giả định</p>
+            <a class="back-to-top" href="#top">Lên đầu trang ↑</a>
+        </div>
+        <p class="disclaimer">Thông tin chỉ phục vụ mục đích học tập và minh hoạ; không phải tư vấn tài chính hoặc khuyến nghị đầu tư.</p>
+    </footer>
+</body>
+</html>
