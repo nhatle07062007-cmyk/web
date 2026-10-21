@@ -10,7 +10,6 @@
     <script src="scripts.js" defer></script>
 </head>
 <body>
-    <a class="skip-link" href="#main">Đi đến nội dung chính</a>
 
     <header class="site-header" id="top">
         <nav class="nav-container" aria-label="Điều hướng chính">
@@ -28,22 +27,42 @@
 
     <main id="main">
         <section class="video-intro" aria-labelledby="video-title">
-            <div class="video-intro-inner">
-                <div class="video-heading">
-                    <p class="eyebrow"><span class="status-dot"></span> VIDEO GIỚI THIỆU</p>
-                    <h1 id="video-title">Phân tích biến động giá</h1>
-                    <p>Xem video trước khi khám phá các biểu đồ và số liệu chi tiết bên dưới.</p>
-                </div>
-                <video class="intro-video" controls playsinline preload="metadata" aria-label="Video giới thiệu phân tích biến động giá">
-                    <source src="dothi.mp4" type="video/mp4">
-                    Trình duyệt của bạn không hỗ trợ phát video. <a href="dothi.mp4">Tải video MP4</a>.
-                </video>
+    <div class="video-intro-inner">
+        <div class="video-heading">
+            <h1 id="video-title">MÔ PHỎNG BIẾN ĐỘNG GIÁ CỦA MỘT MÃ CHỨNG KHOÁN</h1> 
+        </div>
+
+        <!-- Cột bên phải: Chứa Video VÀ Khung chú thích nằm ngay dưới nó -->
+        <div class="video-wrapper-container" style="display: flex; flex-direction: column;">
+            <video class="intro-video" controls playsinline preload="metadata" aria-label="Video giới thiệu phân tích biến động giá">
+                <source src="dothi.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ phát video. <a href="dothi.mp4">Tải video MP4</a>.
+            </video>
+
+            <!-- Đặt khung chú thích ở đây để nó nằm gọn gàng ngay dưới video bên cột phải -->
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px 16px; margin-top: 12px; padding: 10px 15px; background-color: #101a2a; border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 8px; width: 100%; box-sizing: border-box;">
+                <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: #e2e8f0; white-space: nowrap;">
+                    <span style="width: 12px; height: 12px; background: yellow; border-radius: 2px; display: inline-block;"></span> Tham chiếu
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: #e2e8f0; white-space: nowrap;">
+                    <span style="width: 12px; height: 12px; background: dodgerblue; border-radius: 2px; display: inline-block;"></span> Sàn (90%)
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: #e2e8f0; white-space: nowrap;">
+                    <span style="width: 12px; height: 12px; background: mediumorchid; border-radius: 2px; display: inline-block;"></span> Trần (110%)
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: #e2e8f0; white-space: nowrap;">
+                    <span style="width: 12px; height: 12px; background: red; border-radius: 2px; display: inline-block;"></span> Nhỏ hơn tham chiếu
+                </span>
+                <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 0.82rem; color: #e2e8f0; white-space: nowrap;">
+                    <span style="width: 12px; height: 12px; background: limegreen; border-radius: 2px; display: inline-block;"></span> Lớn hơn tham chiếu
+                </span>
             </div>
-        </section>
+        </div>
+    </div>
+</section>
 
         <section class="hero section-anchor" id="tong-quan" aria-labelledby="hero-title">
             <div class="hero-copy">
-                <p class="eyebrow"><span class="status-dot"></span> BÁO CÁO DỮ LIỆU</p>
                 <h1 id="hero-title">Toàn cảnh biến động giá trong năm</h1>
                 <p class="hero-description">Khám phá diễn biến giá đóng cửa, nhịp biến động theo tháng và các mốc được gắn nhãn giá sàn/giá trần trong bộ dữ liệu minh hoạ.</p>
                 <div class="hero-actions">
@@ -61,23 +80,23 @@
         <section class="metrics section-anchor" aria-label="Các chỉ số tổng quan">
             <article class="metric-card">
                 <span class="metric-label">Số quan sát</span>
-                <strong class="metric-value">208</strong>
+                <strong class="metric-value">365</strong>
                 <span class="metric-note">Trong toàn bộ giai đoạn</span>
             </article>
             <article class="metric-card">
                 <span class="metric-label">Giá đóng cửa trung bình</span>
-                <strong class="metric-value">14.317 <small>VND</small></strong>
-                <span class="metric-note">Tính trên 208 quan sát</span>
+                <strong class="metric-value">14.416 <small>VND</small></strong>
+                <span class="metric-note">Tính trên 365 quan sát</span>
             </article>
             <article class="metric-card">
-                <span class="metric-label">Khoảng giá quan sát</span>
-                <strong class="metric-value">7.811–27.024 <small>VND</small></strong>
-                <span class="metric-note">Thấp nhất đến cao nhất</span>
+                <span class="metric-label">Biên độ toàn kỳ</span>
+                <strong class="metric-value">7.029–30.845 <small>VND</small></strong>
+                <span class="metric-note">High lớn nhất - Low nhỏ nhất</span>
             </article>
             <article class="metric-card">
-                <span class="metric-label">Nhãn trong tệp CSV</span>
-                <strong class="metric-value">106 / 102</strong>
-                <span class="metric-note">Giá trần / giá sàn được gắn nhãn</span>
+                <span class="metric-label">Biên độ High-Low</span>
+                <strong class="metric-value">5.608</strong>
+                <span class="metric-note">Lớn nhất trong một dòng (dòng 67)</span>
             </article>
         </section>
 
@@ -87,7 +106,6 @@
                     <p class="eyebrow">KHÁM PHÁ DỮ LIỆU</p>
                     <h2 id="charts-title">Bốn góc nhìn về mức giá</h2>
                 </div>
-                <p class="section-intro">Các biểu đồ được dựng từ cùng bộ dữ liệu giả định. Chọn từng biểu đồ để mở ảnh ở kích thước đầy đủ.</p>
             </div>
 
             <div class="chart-grid">
@@ -123,12 +141,11 @@
                 <div class="insights-heading">
                     <p class="eyebrow">ĐỌC BIỂU ĐỒ</p>
                     <h2 id="insights-title">Những điểm đáng chú ý</h2>
-                    <p>Các nhận xét dưới đây mô tả hình dạng của chuỗi dữ liệu, không phải dự báo hay khuyến nghị giao dịch.</p>
                 </div>
                 <div class="insight-list">
                     <article class="insight-item">
                         <span class="insight-number">01</span>
-                        <div><h3>Biên độ trong năm khá rộng</h3><p>Giá trong mẫu dao động từ khoảng 7.811 đến 27.024 VND. Đỉnh cao nhất xuất hiện trong quý I theo biểu đồ xu hướng.</p></div>
+                        <div><h3>Biên độ trong năm khá rộng</h3><p>Giá trong mẫu dao động từ khoảng 7.029 đến 30.945 VND. Đỉnh cao nhất xuất hiện trong quý I theo biểu đồ xu hướng.</p></div>
                     </article>
                     <article class="insight-item">
                         <span class="insight-number">02</span>
@@ -136,33 +153,57 @@
                     </article>
                     <article class="insight-item">
                         <span class="insight-number">03</span>
-                        <div><h3>Nhãn trần/sàn được giữ nguyên từ CSV</h3><p>Tệp đi kèm ghi nhận 106 dòng “Giá trần” và 102 dòng “Giá sàn”. Đây là nhãn trong dữ liệu đầu vào, chưa được xác thực với quy tắc của một thị trường cụ thể.</p></div>
+                        <div><h3>Mức độ rủi ro qua các ngày bất thường</h3><p>Trong vòng 1 năm, có tới 208 ngày giao dịch bất thường (chiếm tỷ lệ rất lớn). Trong đó, có 106 ngày giá đóng cửa chạm mức Giá trần và 102 ngày rơi xuống mức Giá sàn.</p></div>
                     </article>
                 </div>
             </div>
         </section>
 
-        <section class="method-section section-anchor" id="du-lieu" aria-labelledby="data-title">
-            <div class="method-card">
-                <div class="method-copy">
-                    <p class="eyebrow">PHƯƠNG PHÁP & TỆP NGUỒN</p>
-                    <h2 id="data-title">Hiểu đúng trước khi sử dụng</h2>
-                    <p>Báo cáo sử dụng các ảnh biểu đồ và tệp CSV được cung cấp trong thư mục <code>phan_tich_gia</code>. Tệp CSV có 208 quan sát; ngày được chọn không nhất thiết liên tục.</p>
-                    <p>Các chỉ số tổng quan được tính từ cột <code>Gia_dong_cua</code>. Phân loại “Giá trần/Giá sàn” chỉ phản ánh cột <code>Bat_thuong</code> hiện có, không hàm ý vi phạm hay giới hạn giao dịch thực tế.</p>
-                    <a class="button button-secondary" href="phan_tich_gia/ngay_bat_thuong.csv" download>Tải tệp dữ liệu <span aria-hidden="true">↓</span></a>
-                </div>
-                <aside class="method-note">
-                    <span class="note-icon" aria-hidden="true">i</span>
-                    <h3>Giới hạn của báo cáo</h3>
-                    <p>Không có thông tin về mã tài sản, nguồn dữ liệu thị trường hoặc đơn vị phát hành. Vì vậy, mọi số liệu ở đây chỉ nên dùng để minh hoạ cách đọc biểu đồ.</p>
-                    <p class="updated-note">Đơn vị giá: VND</p>
-                </aside>
-            </div>
-        </section>
-    </main>
+        <section class="section-anchor" id="du-lieu" aria-labelledby="data-title">
+    <!-- Thêm style="display: block;" để phá vỡ bố cục chia cột mặc định -->
+    <div class="method-card" style="display: block;">
+        <!-- Thêm max-width: 100% để phần chữ dàn đều sang phải -->
+        <div class="method-copy" style="max-width: 100%;">
+            <p class="eyebrow">PHƯƠNG PHÁP & TỆP NGUỒN</p>
+            <h2 id="data-title">Phương pháp luận và Dữ liệu phân tích</h2>
+            
+            <h3>1. Phương pháp phân tích</h3>
+            <ul>
+                <li><strong>Phân tích xu hướng (Trend Analysis):</strong> Quan sát đường đi của giá qua từng tháng để xác định chu kỳ tăng/giảm, các mốc đạt đỉnh và chạm đáy trong năm dựa trên biểu đồ đường (Line chart).</li>
+                <li><strong>Phân tích phân phối và độ phân tán (Distribution &amp; Dispersion Analysis):</strong> Đánh giá mức độ biến động giá trị (từ giá thấp nhất đến cao nhất), giá trị trung vị và các điểm ngoại lệ (outliers) của từng tháng thông qua biểu đồ hộp (Boxplot). Đối chiếu sự thay đổi cấu trúc giá giữa nửa đầu năm và nửa cuối năm bằng biểu đồ tần suất (Histogram).</li>
+                <li><strong>Đo lường giá trị trung tâm:</strong> Xem xét mức giá đóng cửa trung bình của từng tháng và mức độ sai số/độ lệch chuẩn (thể hiện qua thanh sai số) từ biểu đồ cột (Bar chart).</li>
+                <li><strong>Xử lý dữ liệu định lượng bằng Python (Quantitative Analysis):</strong> Sử dụng thư viện pandas để đọc và thống kê tệp dữ liệu thô, đếm số lượng các phiên giao dịch có biến động kịch độ (giá trần và giá sàn) để đánh giá mức độ rủi ro của tài sản.</li>
+            </ul>
 
-    <footer class="site-footer">
+            <br>
+
+            <h3>2. Đặc tả dữ liệu nguồn</h3>
+            <p>Báo cáo sử dụng các biểu đồ trực quan và tệp dữ liệu CSV được cung cấp trong thư mục <code>phan_tich_gia</code>. Cụ thể, tệp dữ liệu tập trung vào các ngày có giá đóng cửa bất thường với <strong>208 quan sát</strong> (các ngày ghi nhận không mang tính liên tục).</p>
+            <p>Các chỉ số thống kê tổng quan được tính toán trực tiếp từ cột <code>Gia_dong_cua</code>. Trạng thái biến động kịch biên độ được xác định và phân loại dựa trên cột <code>Bat_thuong</code> (bao gồm trạng thái "Giá trần" và "Giá sàn").</p>
+            
+            <a class="button button-secondary" href="phan_tich_gia/ngay_bat_thuong.csv" download>
+                Tải tệp dữ liệu CSV <span aria-hidden="true">↓</span>
+            </a>
+        </div>
+    </div>
+</section>
+    </main>
+<footer class="site-footer">
+    <div class="footer-container">
+        <div class="footer-info">
+            <p>&copy; Lê Mạnh Nhất. 25CKDL.</p>
+            <p>Báo cáo Phân tích Dữ liệu và Biến động Giá.</p>
+        </div>
         
-    </footer>
+        <div class="footer-links">
+            <ul>
+                <li><a href="https://github.com/nhatle07062007-cmyk" target="_blank" rel="noopener noreferrer">Mã nguồn (GitHub)</a></li>
+                <li><a href="mailto:nhatle07062007@gmail.com">Liên hệ: nhatle07062007@gmail.com</a></li>
+            </ul>
+        </div>
+        
+
+    </div>
+</footer>
 </body>
 </html>

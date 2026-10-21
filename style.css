@@ -2276,3 +2276,35 @@ a {
         text-align: center;
     }
 }
+/* Chú thích nằm ngang, đồng bộ màu nền với web và căn giữa theo video */
+.price-legend-inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; /* Căn giữa các mục chú thích */
+    gap: 0.75rem 1.25rem;
+    margin-top: 1rem;
+    padding: 0.75rem 1rem;
+    background-color: rgba(16, 26, 42, 0.65); /* Đồng bộ với --theme-color (#101a2a) của web */
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    font-size: 0.82rem;
+    color: #e2e8f0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.legend-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap; /* Giữ tên chú thích trên cùng 1 dòng cho gọn */
+}
+
+.legend-color-box {
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+    display: inline-block;
+}
