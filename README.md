@@ -1,28 +1,33 @@
 ## Cấu trúc thư mục
 
-py/
-|-- main.py             # Tệp mã nguồn chính chạy server FastAPI 
-|-- requirements.txt    # Khai báo các thư viện Python cần cài đặt cho dự án
-|-- render.yaml         # Tệp cấu hình để triển khai lên nền tảng Render 
-|-- index.html          # Giao diện người dùng (HTML) 
-|-- style.css           # Tệp định dạng giao diện (CSS) 
-|-- scripts.js          # Tệp xử lý tương tác người dùng (JavaScript) 
-|-- dothi.mp4           # Video mô phỏng biến động giá 
-|-- phan_tich_gia/      # Thư mục chứa dữ liệu CSV ngay_bat_thuong và ảnh biểu đồ 
-    |-- boxplot_gia_theo_thang.png
-    |-- gia_trung_binh_theo_thang.png 
-    |-- phan_bo_gia_2_nua_nam.png 
-    |-- xu_huong_gia_ca_nam.png
-    |-- ngay_bat_thuong.csv
-|-- videogk/            # Tạo video và xử lý dữ liệu 
-    |-- phan_tich_gia/  # Thư mục chứa dữ liệu CSV ngay_bat_thuong và ảnh biểu đồ 
-        |-- boxplot_gia_theo_thang.png
-        |-- gia_trung_binh_theo_thang.png 
-        |-- phan_bo_gia_2_nua_nam.png 
-        |-- xu_huong_gia_ca_nam.png
-        |-- ngay_bat_thuong.csv 
-    |-- abc-23.csv              # Dữ liệu đầu vào 
-    |-- dothi.mp4               # Video mô phỏng biến động giá 
-    |-- dothimophong.py         # Mô phỏng đồ thị dạng video
-    |-- phantichthongke.py      # Phân tích thống kê và trực quan hoá
+```text
 
+├── main.py                  # Server FastAPI chính
+├── requirements.txt         # Khai báo các thư viện Python cần cài đặt cho dự án
+├── render.yaml              # Cấu hình deploy trên Render
+├── index.html               # Giao diện người dùng
+├── style.css                # CSS cho giao diện
+├── scripts.js               # JavaScript xử lý tương tác
+├── dothi.mp4                # Video minh họa biến động giá
+├── .gitignore               # Bỏ qua file không cần đưa lên Git
+├── phan_tich_gia/           # Hình ảnh và dữ liệu phân tích
+│   ├── boxplot_gia_theo_thang.png
+│   ├── gia_trung_binh_theo_thang.png
+│   ├── ngay_bat_thuong.csv
+│   ├── phan_bo_gia_2_nua_nam.png
+│   ├── xu_huong_gia_ca_nam.png
+│   └── ngay_bat_thuong.csv
+├── videogk/                 # Thư mục phụ chứa script và dữ liệu xử lý video
+│   ├── abc-23.csv           # Dữ liệu gốc 
+│   ├── dothi.mp4            # Video minh hoạ biến động giá
+│   ├── dothimophong.py      # Tạo video mô phỏng
+│   ├── phantichthongke.py   # Phân tích và trực quan hoá dữ liệu
+│   └── phan_tich_gia/       # Hình ảnh và dữ liệu phân tích 
+│       ├── boxplot_gia_theo_thang.png
+│       ├── gia_trung_binh_theo_thang.png
+│       ├── ngay_bat_thuong.csv
+│       ├── phan_bo_gia_2_nua_nam.png
+│       ├── xu_huong_gia_ca_nam.png
+│       └── ngay_bat_thuong.csv
+
+```
