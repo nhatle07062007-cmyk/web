@@ -18,7 +18,7 @@ df = df.apply(pd.to_numeric, errors='raise')
 if not np.isfinite(df.to_numpy()).all():
     raise ValueError("Dữ liệu giá không được chứa giá trị thiếu hoặc vô hạn.")
 
-day_count = len(df) # Đảm bảo day_count = 365
+day_count = len(df)
 analysis_year = 2025
 df['Date'] = pd.date_range(f'{analysis_year}-01-01', periods=day_count, freq='D')
 label_x = day_count + 13
@@ -171,7 +171,7 @@ def animate(i):
 
 
 target_duration_seconds = 180  
-playback_fps = day_count / target_duration_seconds  # 365 / 154 ≈ 2.37 fps
+playback_fps = day_count / target_duration_seconds 
 
 ani = animation.FuncAnimation(fig, animate, frames=day_count, init_func=init,
                               interval=1000 / playback_fps, blit=False)
